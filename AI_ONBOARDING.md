@@ -3,6 +3,8 @@
 ## Quick Context
 Centralized documentation for Carrillo Abogados Legal Tech Platform - a cloud-native legal management system for a Colombian law firm (7 lawyers + 2 admin staff).
 
+For full project context, see [CLAUDE.md](./CLAUDE.md).
+
 ## What This Repo Contains
 - Business model and requirements for the platform
 - Technical architecture decisions
@@ -18,4 +20,5 @@ Centralized documentation for Carrillo Abogados Legal Tech Platform - a cloud-na
 ## Related Repos
 - Code: `Carrillo-Abogados/backend-services` and `Carrillo-Abogados/frontend`
 - Infrastructure: `Carrillo-Abogados/platform`
-- Automation: `Carrillo-Abogados/automation`
+- Automation: `Carrillo-Abogados/automation` (Juan Jose Gomez -- n8n workflows)
+- Multi-agent: `Carrillo-Abogados/openclaw-agency` (OpenClaw framework + skills)

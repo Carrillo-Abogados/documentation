@@ -1,6 +1,6 @@
 # Carrillo Abogados - Documentacion Centralizada
 
-Repositorio de documentacion centralizada para la plataforma **Carrillo Abogados Legal Tech** - sistema de gestion legal empresarial para el bufete Carrillo ABGD SAS de Cali, Colombia.
+Repositorio OFICIAL y fuente unica de verdad para la documentacion de la plataforma **Carrillo Abogados Legal Tech** - sistema de gestion legal empresarial para Carrillo ABGD SAS, Cali, Colombia.
 
 ---
 
@@ -11,7 +11,7 @@ Repositorio de documentacion centralizada para la plataforma **Carrillo Abogados
 | `business/` | Modelo de negocio, requerimientos, casos de uso, roles de usuarios, MVP roadmap |
 | `architecture/` | Arquitectura tecnica, ADRs (Architecture Decision Records) |
 | `development/` | Guias de desarrollo, usuarios de prueba, gestion de versiones |
-| `operations/` | Deployment, GCP Cloud Run, observabilidad, secretos |
+| `operations/` | Deployment, GCP Cloud Run, observabilidad, secretos, migracion |
 | `security/` | Gestion de secretos, seguridad CI/CD |
 | `project/` | Estado del proyecto, historial de migracion |
 
@@ -19,13 +19,14 @@ Repositorio de documentacion centralizada para la plataforma **Carrillo Abogados
 
 ## Repositorios de la Organizacion
 
-| Repo | Proposito | IA Asignada |
+| Repo | Proposito | Responsable |
 |------|-----------|-------------|
-| [backend-services](https://github.com/Carrillo-Abogados/backend-services) | 8 microservicios Spring Boot | Claude Code |
-| [frontend](https://github.com/Carrillo-Abogados/frontend) | Aplicacion Next.js 16 + React | GitHub Copilot |
-| [platform](https://github.com/Carrillo-Abogados/platform) | Infraestructura, Docker Compose, Helm, monitoring | Gemini CLI |
-| [documentation](https://github.com/Carrillo-Abogados/documentation) | Este repositorio - documentacion centralizada | Todos |
-| [automation](https://github.com/Carrillo-Abogados/automation) | Workflows n8n marketing | Manual (Juan Jose) |
+| [backend-services](https://github.com/Carrillo-Abogados/backend-services) | 8 microservicios Spring Boot | Claude Code (Opus 4.6) |
+| [frontend](https://github.com/Carrillo-Abogados/frontend) | Aplicacion Next.js 16 + React | Claude Code |
+| [platform](https://github.com/Carrillo-Abogados/platform) | Infraestructura, Docker Compose, Helm, monitoring | Claude Code |
+| [documentation](https://github.com/Carrillo-Abogados/documentation) | Este repositorio - documentacion oficial | Claude Code |
+| [automation](https://github.com/Carrillo-Abogados/automation) | Workflows n8n marketing | Juan Jose Gomez |
+| [openclaw-agency](https://github.com/Carrillo-Abogados/openclaw-agency) | OpenClaw multi-agent framework + skills | Juan Jose Gomez |
 
 ---
 
@@ -46,21 +47,22 @@ Repositorio de documentacion centralizada para la plataforma **Carrillo Abogados
 
 | Categoria | Tecnologia |
 |-----------|------------|
-| **Backend** | Java 21, Spring Boot 3.3.13, Spring Cloud 2023.0.6 |
+| **Backend** | Java 21, Spring Boot 3.3, Spring Cloud 2023.0.6 |
 | **Frontend** | Next.js 16, React 18, TypeScript 5, Tailwind CSS |
 | **Base de Datos** | PostgreSQL 16 (schemas separados por servicio) |
-| **Mensajeria** | NATS 2.10 (dev/staging), Google Pub/Sub (prod) |
-| **Contenedores** | Docker + Google Jib 3.4.4 |
-| **Orquestacion** | Kubernetes + Helm |
+| **Mensajeria** | NATS JetStream (dev/staging), Google Pub/Sub (prod) |
+| **Contenedores** | Docker + Google Jib |
+| **Orquestacion** | Cloud Run (prod) + Kind cluster (local) |
 | **Observabilidad** | Grafana LGTM (Prometheus, Loki, Tempo, Mimir) |
-| **CI/CD** | GitHub Actions |
-| **Seguridad** | Snyk, SonarCloud, Trivy |
+| **CI/CD** | GitHub Actions + Google Artifact Registry |
+| **Seguridad** | Snyk + Trivy |
+| **IA Development** | Claude Code (Opus 4.6) |
 
 ---
 
 ## MVP
 
-- **Fecha objetivo**: 27 de Marzo, 2026
+- **Fecha objetivo**: 10 de Abril, 2026
 - **Cliente**: Carrillo ABGD SAS, Cali, Colombia
 - **Equipo**: 7 abogados + 2 administrativos
-- **Desarrollador**: Alexis
+- **Desarrollador**: Alexis (Claude Code como IA principal)

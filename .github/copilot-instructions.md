@@ -1,4 +1,4 @@
-# Copilot Instructions - Documentation Repository
+# Claude Code Instructions - Documentation Repository
 
 ## Project
 Centralized documentation for Carrillo Abogados Legal Tech Platform.
@@ -17,9 +17,11 @@ Centralized documentation for Carrillo Abogados Legal Tech Platform.
 - Always include timestamps when updating docs
 - Use relative links for cross-references within same directory
 - Reference org repos by full GitHub URL when linking to code
+- Claude Code (Opus 4.6) is the sole AI developer for the platform
 
 ## Related Repositories
 - Carrillo-Abogados/backend-services - Java microservices
 - Carrillo-Abogados/frontend - Next.js application
 - Carrillo-Abogados/platform - Infrastructure and deployment
 - Carrillo-Abogados/automation - n8n marketing workflows
+- Carrillo-Abogados/openclaw-agency - OpenClaw multi-agent framework
