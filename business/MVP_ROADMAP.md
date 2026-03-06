@@ -2,9 +2,9 @@
 
 **Versión**: 1.0  
 **Fecha de Creación**: 2 de Enero, 2026  
-**Última Actualización**: 16 de Febrero, 2026
+**Última Actualización**: 6 de Marzo, 2026
 **Estado**: ✅ Plan Definido  
-**Fecha de Lanzamiento MVP**: **27 de Marzo, 2026**
+**Fecha de Lanzamiento MVP**: **10 de Abril, 2026**
 
 ---
 
@@ -15,7 +15,7 @@ Este documento define el **roadmap completo del MVP** para la plataforma Carrill
 ### Objetivo del MVP
 > **Capturar leads desde el portal web, clasificarlos automáticamente mediante n8n, y visualizar la información en dashboards para la toma de decisiones, garantizando alta disponibilidad y seguridad.**
 
-### Tiempo hasta MVP: **~12 semanas** (2 Ene - 27 Mar 2026)
+### Tiempo hasta MVP: **~14 semanas** (2 Ene - 10 Abr 2026)
 
 ---
 
@@ -416,7 +416,7 @@ ENERO 2026                FEBRERO 2026              MARZO 2026
 │                         │                   PILAR 5: Producción             │
 │                         │                         │                         │
 │                         │                         │                   🚀 MVP│
-│                         │                         │                   27 Mar│
+│                         │                         │                   10 Abr│
 └─────────────────────────┴─────────────────────────┴─────────────────────────┘
 ```
 
@@ -447,7 +447,7 @@ ENERO 2026                FEBRERO 2026              MARZO 2026
 | S9 | 3-7 Mar | Dashboard de leads | Frontend |
 | S10 | 10-14 Mar | Notificaciones email funcionales | Backend |
 | S11 | 17-21 Mar | Deploy a GKE + DNS | DevOps |
-| S12 | 24-27 Mar | Testing final + Lanzamiento | Todos |
+| S12 | 24 Mar - 10 Abr | Testing final + Lanzamiento | Todos |
 
 ---
 

@@ -1,18 +1,20 @@
 # 🔐 Guía de Seguridad - CI/CD Pipeline
 
-**Última Actualización**: 14 de Febrero, 2026  
+**Última Actualización**: 6 de Marzo, 2026
 **Estado**: ✅ Integrado con GitHub Actions
 
 ---
 
 ## 📋 Herramientas de Seguridad
 
-| Herramienta | Propósito | Integración |
-|-------------|-----------|-------------|
-| **Snyk** | Vulnerabilidades en dependencias y código | GitHub Actions + Dashboard |
-| **SonarCloud** | Análisis estático de código, code smells | GitHub Actions + Dashboard |
-| **Trivy** | Escaneo de contenedores y filesystem | GitHub Actions |
-| **OWASP ZAP** | DAST / Penetration testing | Manual / Workflow dispatch |
+| Herramienta | Propósito | Integración | Estado |
+|-------------|-----------|-------------|--------|
+| **Snyk** | Vulnerabilidades en dependencias Maven | GitHub Actions (workflow summary) | ✅ Activo |
+| **Trivy** | Escaneo de filesystem y dependencias | GitHub Actions (workflow summary) | ✅ Activo |
+| **SonarCloud** | Análisis estático de código, code smells | NO configurado | ⏸️ Pospuesto |
+| **OWASP ZAP** | DAST / Penetration testing | Manual / Workflow dispatch | ⏸️ Pospuesto |
+
+> **Nota**: Los resultados de Snyk y Trivy se reportan en el **workflow summary** de GitHub Actions, no en GitHub Advanced Security (GHAS). No se usan SARIF uploads.
 
 ---
 
@@ -26,7 +28,8 @@
 
 El workflow `security-scan.yml` ejecuta:
 1. **Snyk Open Source**: Escanea dependencias Maven
-2. **Snyk Code**: Analiza código fuente (SAST)
+
+> **Nota**: `SNYK_TOKEN` está configurado como secret en el repo `backend-services`. Los resultados se publican en el workflow summary de GitHub Actions.
 
 ### Secrets Requeridos
 
@@ -50,40 +53,13 @@ Para obtenerlo:
 
 ---
 
-## 📊 SonarCloud
+## 📊 SonarCloud (POSPUESTO)
 
-### Dashboard
-- **URL**: https://sonarcloud.io/project/overview?id=AlexisJ16_CarrilloAbogados
+> **Estado**: NO configurado actualmente. Pospuesto para una fase posterior.
 
-### Métricas Clave
-
-| Métrica | Descripción | Objetivo |
-|---------|-------------|----------|
-| **Security** | Vulnerabilidades de seguridad | 0 |
-| **Reliability** | Bugs potenciales | 0 |
-| **Maintainability** | Code smells, deuda técnica | A rating |
-| **Coverage** | Cobertura de tests | > 80% |
-| **Duplications** | Código duplicado | < 3% |
-
-### Secrets Requeridos
-
-```
-SONAR_TOKEN: Tu token de SonarCloud
-```
-
-Para obtenerlo:
-1. Ir a https://sonarcloud.io/account/security
-2. Generate Token → Copiar
-3. Agregar en GitHub → Settings → Secrets → Actions
-
-### Quality Gates
-
-El proyecto usa el Quality Gate "Sonar way" que requiere:
-- 0 bugs nuevos
-- 0 vulnerabilidades nuevas
-- 0 security hotspots pendientes
-- Coverage en código nuevo ≥ 80%
-- Duplications en código nuevo < 3%
+Cuando se configure, se necesitará:
+- `SONAR_TOKEN` como GitHub secret
+- URL: https://sonarcloud.io/account/security para generar token
 
 ---
 
@@ -99,7 +75,7 @@ Trivy escanea:
 ### Resultados
 
 Los resultados se publican automáticamente en:
-- GitHub Security → Code scanning alerts
+- GitHub Actions → Workflow summary (no GHAS/SARIF)
 
 ### Severidades Reportadas
 
@@ -133,24 +109,22 @@ OWASP ZAP está configurado pero deshabilitado por defecto. Para ejecutar:
 │                                                                 │
 │  Trigger: Push to main/staging, Weekly schedule, Manual        │
 │                                                                 │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐            │
-│  │   Snyk      │  │ SonarCloud  │  │   Trivy     │            │
-│  │  Scan       │  │  Analysis   │  │   Scan      │            │
-│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘            │
-│         │                │                │                    │
-│         └────────────────┼────────────────┘                    │
-│                          │                                      │
-│                          ▼                                      │
-│                  ┌──────────────┐                              │
-│                  │   Summary    │                              │
-│                  │   Report     │                              │
-│                  └──────────────┘                              │
+│  ┌─────────────┐                    ┌─────────────┐            │
+│  │   Snyk      │                    │   Trivy     │            │
+│  │  Scan       │                    │   Scan      │            │
+│  └──────┬──────┘                    └──────┬──────┘            │
+│         │                                  │                    │
+│         └──────────────┬───────────────────┘                    │
+│                        │                                        │
+│                        ▼                                        │
+│                ┌──────────────┐                                │
+│                │  Workflow    │                                │
+│                │  Summary     │                                │
+│                └──────────────┘                                │
 │                                                                 │
 │  Results:                                                       │
-│  • GitHub Security tab (SARIF uploads)                         │
-│  • Snyk Dashboard                                              │
-│  • SonarCloud Dashboard                                        │
-│  • Job Summary in Actions                                      │
+│  • GitHub Actions → Workflow Summary (reportes)                │
+│  • Snyk Dashboard (https://app.snyk.io)                        │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -165,7 +139,7 @@ OWASP ZAP está configurado pero deshabilitado por defecto. Para ejecutar:
 # Ir a: GitHub → Settings → Secrets and variables → Actions
 
 SNYK_TOKEN=<tu-token-snyk>
-SONAR_TOKEN=<tu-token-sonarcloud>
+# SONAR_TOKEN - NO configurado actualmente (pospuesto)
 ```
 
 ### 2. Verificar Integración
@@ -200,29 +174,23 @@ En SonarCloud:
 | client-service | 0 | 8 | 4 | 1 |
 | **TOTAL** | **1** | **80** | **83** | **62** |
 
-### SonarCloud (según captura)
+### SonarCloud
 
-| Categoría | Issues | Severidad |
-|-----------|:------:|-----------|
-| Security | 8 | - |
-| Reliability | 0 | - |
-| Maintainability | 27 | 12 Blocker, 8 High, 8 Medium, 7 Low |
+> NO configurado actualmente. Pospuesto para una fase posterior.
 
 ### Próximos Pasos
 
-1. Resolver el issue **Critical** en api-gateway
-2. Reducir los **Blocker** issues en SonarCloud
-3. Agregar tests para mejorar coverage
-4. Configurar Quality Gate más estricto
+1. Resolver el issue **Critical** en api-gateway (Snyk)
+2. Agregar tests para mejorar coverage
+3. Evaluar configuración de SonarCloud cuando sea prioritario
 
 ---
 
 ## 🔗 Enlaces Rápidos
 
 - [Snyk Dashboard](https://app.snyk.io/org/alexisj16)
-- [SonarCloud Dashboard](https://sonarcloud.io/project/overview?id=AlexisJ16_CarrilloAbogados)
-- [GitHub Security Tab](https://github.com/AlexisJ16/CarrilloAbogados/security)
-- [Security Scan Workflow](../.github/workflows/security-scan.yml)
+- [GitHub Actions - Security Scan](https://github.com/Carrillo-Abogados/backend-services/actions)
+- [Security Scan Workflow](https://github.com/Carrillo-Abogados/backend-services/blob/dev/.github/workflows/security-scan.yml)
 
 ---
 

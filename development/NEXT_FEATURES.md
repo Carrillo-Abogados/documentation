@@ -1,14 +1,14 @@
 # 🚀 PRÓXIMOS DESARROLLOS - Carrillo Abogados Legal Tech
 
-**Última Actualización**: 14 de Febrero, 2026  
-**Fase Actual**: FASE 14 - Infraestructura Depurada  
-**MVP Target**: 27 de Marzo, 2026
+**Última Actualización**: 6 de Marzo, 2026
+**Fase Actual**: FASE 17 - Depuración Exhaustiva
+**MVP Target**: 10 de Abril, 2026
 
 ---
 
 ## 📊 ESTADO ACTUAL DEL PROYECTO
 
-### ✅ Completado (FASE 14)
+### ✅ Completado (FASE 17)
 
 | Componente | Estado | Detalles |
 |------------|--------|----------|
@@ -18,10 +18,17 @@
 | **n8n-integration-service** | ✅ 95% | Bridge NATS ↔ Webhooks |
 | **notification-service** | ✅ 80% | Backend completo |
 | **Docker Compose** | ✅ 100% | 11/11 contenedores healthy (Jib) |
-| **CI/CD Pipeline** | ✅ 100% | 8 imágenes en ghcr.io |
+| **CI/CD Pipeline** | ✅ 100% | 8 imágenes en Google Artifact Registry |
 | **CORS + Auth Frontend** | ✅ 100% | Login/Logout funcional desde frontend |
 | **Header con Auth UI** | ✅ 100% | Botón login/menú usuario implementado |
 | **Infra Depurada** | ✅ 100% | user-service eliminado, Jib, configs limpias |
+| **Flyway case-service** | ✅ 100% | V1-V4 creados (4 entidades, 25+ enums) |
+| **Flyway notification-service** | ✅ 100% | V1 creado |
+| **NATS jnats** | ✅ 100% | Agregado a notification-service |
+| **DDL-auto corregido** | ✅ 100% | none (default), validate (kubernetes/prod) |
+| **application-prod.yml** | ✅ 100% | MySQL→PostgreSQL corregido (client, case) |
+| **documentation/ consolidada** | ✅ 100% | Fuente oficial de verdad, duplicados eliminados |
+| **Claude Code** | ✅ 100% | Establecido como único developer (Opus 4.6) |
 
 ### 🔄 En Progreso
 
@@ -395,4 +402,4 @@ W1      W2      W3      W4    W1      W2      W3      W4     W1      W2      W3 
 ---
 
 *Documento creado: 3 de Enero, 2026*  
-*Última actualización: 14 de Febrero, 2026*
+*Última actualización: 6 de Marzo, 2026*

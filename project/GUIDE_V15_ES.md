@@ -1,3 +1,6 @@
+> **DOCUMENTO HISTÓRICO**: Este documento corresponde a la FASE 15 del proyecto.
+> Para el estado actual, consultar `PROYECTO_ESTADO.md`.
+
 # 📖 Guía de la Fase 15: "Infraestructura como un Reloj"
 
 ¡Hola! Esta guía te explicará qué hicimos hoy en la base de nuestra plataforma (**Platform**). Imagina que estamos construyendo un edificio inteligente; hoy instalamos las tuberías más fuertes, los guardias de seguridad más listos y un sistema de cámaras que nos avisa de todo.

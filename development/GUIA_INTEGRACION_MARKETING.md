@@ -4,7 +4,7 @@
 **Fecha**: 21 de Enero, 2026
 **Autor**: Equipo de Desarrollo
 **Para**: Juan José Gómez Agudelo (Marketing Tech)
-**Fase Proyecto**: FASE 14 - Infraestructura Depurada
+**Fase Proyecto**: FASE 17 - Depuración Exhaustiva
 
 > ⚠️ **ACTUALIZACIÓN IMPORTANTE**: Toda la documentación y workflows de n8n ahora se encuentran en `/automation/` (fuente de verdad única)
 

@@ -36,5 +36,5 @@ Cada agente desplegará sus servicios según el entorno:
 3. **Deploy**: Aplicar los cambios en el proyecto de GCP correspondiente.
 
 ---
-**Firmado**: Gemini CLI (Arquitecto de Plataforma)
+**Firmado**: Claude Code (Opus 4.6)
 **Fecha**: 4 de Marzo de 2026

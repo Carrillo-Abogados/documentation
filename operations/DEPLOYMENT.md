@@ -1,9 +1,9 @@
 # ☁️ Guía de Deployment - HostGator cPanel + GCP
 
-**Última Actualización**: 16 de Febrero, 2026
+**Última Actualización**: 6 de Marzo, 2026
 **Estado**: 📋 Estrategia Definida
-**Fase Proyecto**: FASE 14 - Infraestructura Depurada
-**Imágenes Docker**: 8 servicios construidos con Google Jib, publicados en ghcr.io
+**Fase Proyecto**: FASE 17 - Depuración Exhaustiva
+**Imágenes Docker**: 8 servicios construidos con Google Jib, publicados en Google Artifact Registry (us-central1-docker.pkg.dev/carrillo-admin-ops/carrillo-platform/)
 
 ---
 

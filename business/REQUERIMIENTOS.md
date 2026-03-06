@@ -323,7 +323,7 @@ Estos requerimientos definen las funcionalidades visibles para visitantes anóni
 
 ## 🎯 PRIORIZACIÓN MoSCoW
 
-### MUST HAVE (MVP - 27 Marzo 2026)
+### MUST HAVE (MVP - 10 Abril 2026)
 
 **Portal Público:**
 - Página de inicio con servicios

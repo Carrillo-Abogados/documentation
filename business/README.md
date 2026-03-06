@@ -42,4 +42,4 @@
 | 4 | Dashboards | ALTO |
 | 5 | Produccion | ALTO |
 
-**Fecha de lanzamiento MVP**: 27 de Marzo, 2026
+**Fecha de lanzamiento MVP**: 10 de Abril, 2026

@@ -1,3 +1,7 @@
+> **NOTA HISTÓRICA**: Este documento registra la migración de monorepo a multi-repo (Febrero 2026).
+> Desde Marzo 2026, Claude Code (Opus 4.6) es el único developer de todos los repos (excepto automation/).
+> Las referencias a Copilot y Gemini CLI son históricas y ya no aplican.
+
 # Guia de Migracion a Organizacion GitHub + Multi-AI Workflow
 
 **Version**: 3.0

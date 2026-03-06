@@ -184,7 +184,7 @@ El **Portal Web Carrillo ABGD** será la plataforma digital integral que:
 
 ### Fecha Objetivo de Lanzamiento
 
-**27 de Marzo de 2026** (MVP)
+**10 de Abril de 2026** (MVP)
 
 ---
 

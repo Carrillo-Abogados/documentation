@@ -1,7 +1,7 @@
 # Arquitectura - Carrillo Abogados Legal Tech Platform
 
 **Última Actualización**: 14 de Febrero, 2026  
-**Estado**: FASE 14 - Infraestructura Depurada
+**Estado**: FASE 17 - Depuración Exhaustiva
 
 ## Visión General
 
@@ -80,12 +80,12 @@ PostgreSQL compartida con schemas separados:
 ## Despliegue
 
 ### Ambientes
-- **dev**: Docker Compose local / Minikube (WSL)
+- **dev**: Docker Compose local / Kind cluster (WSL)
 - **staging**: GKE (e2-micro)
 - **prod**: GKE Autopilot
 
 ### CI/CD
 - GitHub Actions (ci-cd-pipeline.yml)
-- Google Jib → ghcr.io/alexisj16/
+- Google Jib → us-central1-docker.pkg.dev/carrillo-admin-ops/carrillo-platform/
 - Helm Charts para Kubernetes
 - Rolling updates

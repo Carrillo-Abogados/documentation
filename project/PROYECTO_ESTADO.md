@@ -203,7 +203,7 @@ docker-compose -f docker-compose.observability.yml up -d
 
 ## 🚀 MVP ROADMAP - 5 PILARES
 
-**Fecha de Lanzamiento**: 27 de Marzo, 2026 (12 semanas)
+**Fecha de Lanzamiento**: 10 de Abril, 2026
 
 | # | Pilar | Descripción | Semanas | Estado |
 |---|-------|-------------|---------|--------|
@@ -533,7 +533,7 @@ git push origin dev
 - **Desarrollador**: Alexis
 - **Cliente**: Carrillo Abogados, Cali, Colombia
 - **Email Admin**: ingenieria@carrilloabgd.com
-- **MVP Target**: 27 Marzo 2026
+- **MVP Target**: 10 Abril 2026
 
 ---
 

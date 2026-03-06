@@ -1,7 +1,7 @@
 # 🧪 Usuarios de Prueba E2E - Carrillo Abogados
 
 **Última Actualización**: 14 de Febrero, 2026  
-**Fase Proyecto**: FASE 14 - Infraestructura Depurada  
+**Fase Proyecto**: FASE 17 - Depuración Exhaustiva  
 **Estado**: ✅ Todos los usuarios verificados y funcionando
 
 ---

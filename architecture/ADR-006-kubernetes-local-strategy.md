@@ -79,4 +79,6 @@ Durante las pruebas en WSL2 con Docker Engine nativo, encontramos problemas pers
 18 de Diciembre, 2025
 
 ## Estado
-**Aceptada**
+**Superseded**
+
+> Superseded: Migrado de Minikube/Docker Desktop Kubernetes a Kind cluster en Marzo 2026. Kind resolvió los problemas de cgroups v2 en WSL2 y es más ligero para desarrollo local.

@@ -1,6 +1,6 @@
 # 🔐 Secrets Management - Carrillo Abogados
 
-**Última Actualización**: 16 de Febrero, 2026
+**Última Actualización**: 6 de Marzo, 2026
 
 ---
 
@@ -16,8 +16,8 @@ Este documento describe cómo gestionar de forma segura las API keys, tokens y c
 
 | Secret | Propósito | Estado |
 |--------|-----------|--------|
-| `SNYK_TOKEN` | Análisis de vulnerabilidades | ✅ Configurado |
-| `SONAR_TOKEN` | Análisis de código SonarCloud | ✅ Configurado |
+| `SNYK_TOKEN` | Análisis de vulnerabilidades (Snyk) | ✅ Configurado (backend-services) |
+| `SONAR_TOKEN` | Análisis de código SonarCloud | ⏸️ No configurado (pospuesto) |
 
 ### GitHub Repository Secrets (Por Configurar)
 
